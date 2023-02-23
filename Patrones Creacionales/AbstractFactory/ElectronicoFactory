@@ -1,0 +1,29 @@
+
+
+public class ElectronicoFactory {
+    public static IElectronico make(String tipoElectronico){
+        IElectronico electronico;
+        switch(tipoElectronico){
+            case "television":
+            electronico = new Television(tipoElectronico, 2500);
+                break;
+            case "refrigerador":
+            electronico = new Refrigerador(tipoElectronico, 5000);
+                break;
+                case "microondas":
+            electronico = new Microondas(tipoElectronico, 3200);
+                break;
+                case "radio":
+            electronico = new Radio(tipoElectronico, 3800);
+                break;
+                case "batidora":
+            electronico = new Batidora(tipoElectronico, 1700);
+                break;
+            default:
+         
+            electronico = new Radio(tipoElectronico, 700);
+                
+        }
+        return electronico;
+    }
+}
