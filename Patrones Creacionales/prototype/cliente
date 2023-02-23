@@ -1,0 +1,25 @@
+package patronesdisenoprimerparcial.primerParcialFilaA.ejercicio2Prototype;
+
+public class Client {
+    public static void main(String[] args) {
+        Televisor nuevoTelevisor = new Televisor("android", "11.0", 80, 50, true, 4, true, true, "1234PPNQRP");
+        Televisor a = nuevoTelevisor.clone();
+        Televisor b = nuevoTelevisor.clone();
+        Televisor c = nuevoTelevisor.clone();
+        Televisor d = nuevoTelevisor.clone();
+        Televisor e = nuevoTelevisor.clone();
+
+        a.setSerialDelTelevisor("1345BDPRBT");
+        b.setSerialDelTelevisor("82749503UT");
+        c.setSerialDelTelevisor("173HDYR50O");
+        d.setSerialDelTelevisor("JSHFUTPRHC");
+        e.setSerialDelTelevisor("158294HBCS");
+
+        System.out.println("vendo televisores:)");
+        a.show();
+        b.show();
+        c.show();
+        d.show();
+        e.show();
+    }
+}
