@@ -1,0 +1,11 @@
+package PrimerParcial.Interpreter;
+
+public class Traductor {
+    protected String input = "";
+    protected int output = 0;
+    protected boolean signo = true; 
+    public Traductor(String input){
+        this.input = input;
+    }
+
+}
