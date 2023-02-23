@@ -1,0 +1,7 @@
+
+
+public interface TelevisorPrototype extends Cloneable {
+    Televisor clone();
+}
+
+
