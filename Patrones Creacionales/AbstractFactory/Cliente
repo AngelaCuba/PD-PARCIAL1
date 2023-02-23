@@ -1,0 +1,19 @@
+
+
+
+public class Client {
+    public static void main(String[] args) {
+       
+        Refrigerador r = (Refrigerador) ElectronicoFactory.make("refrigerador");
+        Microondas m = (Microondas) ElectronicoFactory.make("microondas");
+        Batidora b = (Batidora) ElectronicoFactory.make("batidora");
+        Radio ra = (Radio) ElectronicoFactory.make("radio");
+        Television tele = (Television) ElectronicoFactory.make("television");
+
+        tele.show();
+        r.show();
+        m.show();
+        ra.show();
+        b.show();
+    }
+}
