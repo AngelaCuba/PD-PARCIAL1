@@ -1,0 +1,6 @@
+package PrimerParcial.Singleton1;
+
+public class Registro {
+    public String nombre;
+
+}
