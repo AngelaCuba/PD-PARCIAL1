@@ -1,0 +1,51 @@
+package PrimerParcial.Singleton1;
+
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Cabina {
+
+    private  static Cabina instance = null;
+    private int saldo = 0;
+
+    private Map<Vehiculo, Integer> registro;
+    private Cabina(){
+        System.out.println("PRINCIPIO");
+        this.registro = new HashMap<>();
+    }
+
+    private synchronized static void create(){
+        if (instance == null){
+            instance = new Cabina();
+        }
+    }
+
+
+    // global access
+    public static Cabina getInstance(){
+        if (instance == null){
+            create();
+        }
+        return instance;
+    }
+
+    public void pagarPeaje(int peaje, Vehiculo vehiculo){
+        this.saldo+= peaje;
+        this.registro.put(vehiculo,peaje);
+        System.out.println("PAGO: " + peaje + "POR EL VEHICULO" + vehiculo.getPlaca());
+
+
+    }
+
+    public void mostrarReporte(){
+        System.out.println("----Reporte----");
+        if(registro.size()==0){
+            System.out.println("No hay registros");
+        } else{
+            for (Vehiculo key: registro.keySet()){
+                System.out.println("--> " + key.showinfo() + " pagó Bs " + registro.get(key));
+            }
+        }
+    }
+}
